@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <title><%= content_for(:title) || "Gumroad Copilot — AI Revenue Intelligence for Creators" %></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="AI-powered revenue intelligence dashboard for Gumroad creators. Optimize pricing, detect refund issues, and grow your revenue.">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Gumroad Copilot">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#0F0F14">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= yield :head %>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+
+    <%# Includes all stylesheet files in app/assets/stylesheets %>
+    <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
+    <%= javascript_include_tag "application", "data-turbo-track": "reload", type: "module" %>
+  </head>
+
+  <body class="bg-[#0F0F14] text-white antialiased">
+    <%= yield %>
+  </body>
+</html>

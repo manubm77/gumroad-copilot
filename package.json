@@ -1,0 +1,19 @@
+{
+  "name": "gumroad-copilot",
+  "private": true,
+  "scripts": {
+    "build": "esbuild app/javascript/application.tsx --bundle --sourcemap --format=esm --outdir=app/assets/builds --public-path=/assets --loader:.tsx=tsx --loader:.ts=ts --target=es2020",
+    "build:css": "tailwindcss -i ./app/assets/stylesheets/application.tailwind.css -o ./app/assets/builds/application.css --minify"
+  },
+  "dependencies": {
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5",
+    "typescript": "^6.0.3"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.2.4",
+    "esbuild": "^0.25.0"
+  }
+}
